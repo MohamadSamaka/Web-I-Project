@@ -68,11 +68,6 @@ body{
 
 .sub-menu li{
     list-style:none;
-
-}
-
-
-.sub-menu li{
     padding-top: 5px;
     margin-left: -35px;
     font-size: 20px;
@@ -121,28 +116,9 @@ a{
     height: 2px;
     background: white;
     transition: width .3s;
-}#language::after{
-    content:'';
-    display:block;
-    width: 0px;
-    height: 2px;
-    background: white;
-    transition: width .3s;
-}#language::after{
-    content:'';
-    display:block;
-    width: 0px;
-    height: 2px;
-    background: white;
-    transition: width .3s;
-}#language::after{
-    content:'';
-    display:block;
-    width: 0px;
-    height: 2px;
-    background: white;
-    transition: width .3s;
-}#language::after{
+}
+
+#language::after{
     content:'';
     display:block;
     width: 0px;
@@ -150,7 +126,6 @@ a{
     background: white;
     transition: width .3s;
 }
-
 
 #about:hover::after{
     width: 100%;
@@ -161,6 +136,8 @@ a{
     position: absolute;
     top: 25%;
     left: 100px;
+    /* transform: translateX(50px);
+    transition: transform 1s ease-out; */
 }
 
 
@@ -185,7 +162,7 @@ a{
     font-family: 'Rubik', sans-serif;
     transform: translate(0,-20px);
     transition: opacity .5s ease-out, transform .5s ease-out;
-	transition: transformfff 1s ease-out;
+	transition: transform 1s ease-out;
     transition-delay: 100ms;
 }
 
@@ -194,7 +171,6 @@ a{
       position: absolute;
       top: 88%;
       left: 50%;
-      transform: translate(-50%,-50%);
   }
   .arrow span{
       display: block;
