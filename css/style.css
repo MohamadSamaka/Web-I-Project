@@ -1,10 +1,14 @@
+@import url(https://necolas.github.io/normalize.css/);
 body,html{
-    top: 0;
-    bottom: 0;
+    padding:0px;
+    margin:0px;
+    background-color: black;
 }
 
 body{
-    width: 99%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     background:linear-gradient(0deg,rgb(255, 255, 255, 0.2),transparent),url("../materials/AAUPBackground2.jpeg") center center fixed;
     background-size:100% auto;
     background-repeat:no-repeat;
@@ -27,25 +31,58 @@ body{
 
 .lang-menu{
     border-radius: 5px;
+    padding-top: 10px;
 }
 
+
+#arabic::after{
+    content:"";
+    background-image: url(https://www.countryflags.io/PS/flat/64.png);
+    display: block;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+
+.language{
+    display: flex;
+    justify-content: space-between;
+    width:100px;
+    line-height: 1.5;
+    /* opacity: 0; */
+}
+
+#english::after{
+    content:"";
+    background-image: url(https://www.countryflags.io/UM/shiny/64.png);
+    display: block;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
 
 .lang-menu ul{
     list-style:none;
-}
+    background:white;
+    border-radius: 5px;
 
-.lang-menu a{
-    margin-left: -25px;
-    font-size: 18px;
-    /* display: none; */
 }
 
 
-#lang:hover ~ .lang-menu a{
+.lang-menu li{
+    padding-top: 5px;
+    margin-left: -35px;
+    font-size: 20px;
+    display: none;
+}
+
+
+
+#lang:hover ~ .lang-menu li, .lang-menu:hover li{
     display:block;
+    animation: fading 1s;
 }
-
-
 
 a{
     text-decoration: none;
@@ -61,7 +98,7 @@ a{
 }
 
 #about, #lang{
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
@@ -80,9 +117,9 @@ a{
     font-size: 30px;
     transform: translateX(50px);
     transition: transform 1s ease-out;
-    animation: fadein 2s;
+    animation: fading 2s;
 }
-@keyframes fadein{
+@keyframes fading{
     from{
         opacity: 0;
     }
