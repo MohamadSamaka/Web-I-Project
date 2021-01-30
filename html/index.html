@@ -1,16 +1,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/style.css">
+        <!-- <script src="../js/js.js"></script> -->
         <link reld="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e892bebfdd.js" crossorigin="anonymous"></script>
         <title>AAUP Map</title>
     </head>
     <body>
+        <div class="face1">
         <nav>
         <div class="navigation">
-        <a id="logo" href="#">AAUP</a>
+        <a class="" id="logo" href="#">AAUP</a>
         <ul class="menu">
             <li><a href="#" id="about">About</a></li>
             <div class="lang-menu">
@@ -32,14 +35,37 @@
         <p id = "overview">An easier way to overlook the AAUP university.</p>
         </div>
         </section>
-        <section>
+        <section id="bottom">
             <div class="arrow">
-                <a href="#">
+                <a href="#scroll-target">
                 <span></span>
                 <span></span>
                 <span></span>
                 </a>
             </div>
         </section>
-    </body>
+    </div>
+    <section>
+    <div id="scroll-target" class="filter-search-box">
+            <div class="drop_down">
+            <div id="default">None</div>
+            <ul class="DropDownMenu">
+                <li>None</li>
+                <li>Colleges</li>
+                <li>Parkings</li>
+                <li>Gates</li>
+            </ul> 
+            </div>
+            <from class="search_feild">
+                <input type="text" class="search" placeholder="Search">
+                <i class="fas fa-search"></i><script src="https://kit.fontawesome.com/e892bebfdd.js" crossorigin="anonymous"></script>
+            </from>
+        </div>
+        <img id="AAUPmap" usemap="#workmap" src="../materials/AuupMapE5.jpg">
+        <map name="workmap">
+            <area shape="circle" style="background-color:red;" coords="361,37,10" href="#">
+        </map>
+    </section>
+            <script src="../js/js.js"></script>
+</body>
 </html>
