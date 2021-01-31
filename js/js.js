@@ -1,42 +1,31 @@
-
-var runOnScroll =  function(evt) {
-    // not the most exciting thing, but a thing nonetheless
-    console.log(evt.target);
-  };
+var flipper = false;
 window.addEventListener("scroll",(event => {
-    // console.log(window.scrollY);
     if(window.scrollY > 60){
-        // document.getElementsByClassName("navigation")[0].style.backgroundColor="white";
-        document.getElementById("about").style.color = "black";
-        document.getElementById("lang").style.color = "black";
-        // if(!document.getElementsByClassName("navigation")[0].classList.contains("nav")
-        document.getElementsByClassName("navigation")[0].classList.add("nav-activate");
-        // document.getElementsByClassName("menu")[0].style.color="black";
-        document.getElementsByClassName("menu")[0].classList.add("nav-up");
-        document.getElementById("logo").classList.add("nav-up");
-        if(document.getElementsByClassName("navigation")[0].classList.contains("nav-deactive"))
-        document.getElementsByClassName("navigation")[0].classList.remove("nav-deactive");
-        if(document.getElementsByClassName("menu")[0].classList.contains("nav-down") &&
-        document.getElementsById("logo").contains("nav-down")){
-            // document.getElement("logo").classList.remove("nav-down");
-            document.getElementsByClassName("menu")[0].getElementsByTagName("a")[0].classList.remove("nav-down");
-            document.getElementsByClassName("menu")[0].classList.remove("nav-down")};
+        document.getElementById("site-header-bg").classList.add("MenuScrollingDown-bg");
+        document.getElementById("site-header").classList.add("MenuScrollingDown-menu");
+        document.getElementById("site-header").classList.remove("MenuScrollingUp-menu");
+        document.getElementById("site-header").getElementsByTagName("li")[0].getElementsByTagName("a")[0].style.color = "black";
+        document.getElementById("site-header").getElementsByTagName("li")[1].getElementsByTagName("a")[0].style.color = "black";      
+        if(document.getElementById("site-header").classList.contains("MenuScrollingDown-menu")){
+            flipper = true;
+        } 
     }
     else{
-        document.getElementById("about").style.color = "white";
-        document.getElementById("lang").style.color = "white";
-        if(document.getElementById("logo").classList.contains("nav-up")){
-        document.getElementsByClassName("menu")[0].classList.add("nav-down");
-        document.getElementById("logo").classList.add("nav-down");
+        document.getElementById("site-header-bg").classList.remove("MenuScrollingDown-bg");
+        document.getElementById("site-header").classList.remove("MenuScrollingDown-menu");
+        if(flipper == true){
+            document.getElementById("site-header").classList.add("MenuScrollingUp-menu");
         }
-        document.getElementById("logo").classList.remove("nav-up");
-        // document.getElementsByClassName("menu")[0].classList.remove("nav-up");
-        // document.getElementsByClassName("menu")[0].classList.add("nav-down");
-        // document.getElementsById("menu")[0].classList.add("nav-down");
-        document.getElementsByClassName("navigation")[0].classList.remove("nav-activate");
-        document.getElementsByClassName("navigation")[0].classList.remove("nav-deactivate");
+        flipper = false;
+        document.getElementById("site-header").getElementsByTagName("li")[0].getElementsByTagName("a")[0].style.color = "white";
+        document.getElementById("site-header").getElementsByTagName("li")[1].getElementsByTagName("a")[0].style.color = "white";
     }
 }))
+
+
+function AA(ele){
+    var a = ele;
+}
 
 document.getElementById("default").addEventListener("click", Activate);
 var LI = document.getElementsByClassName("DropDownMenu")[0].children;
@@ -44,6 +33,7 @@ for(var i = 0; i < LI.length; i++)
     LI[i].addEventListener("click", function(e){
         GetText(e)
     });
+    
 function Activate(){
     var element = document.getElementsByClassName("DropDownMenu")[0];
     if(element.classList.contains("active"))
@@ -60,3 +50,18 @@ function GetText(elem){
 function SetText(str){
     document.getElementById("default").innerHTML = str;
 }
+
+
+function mouseOverInfo(event) {
+    var element = document.getElementsByClassName(event.target.classList[1])[1];
+    console.log(event.pageY - 940 + "px")
+    // element.style.display = "block";
+    // element.style.top = event.pageY + "px";
+    element.style.top = event.pageY - 1500 + "px";
+    element.style.left = event.pageX + "px";
+  }
+  
+  function mouseOut(event) {
+    var element = document.getElementsByClassName(event.target.classList[1])[1];
+    // element.style.display = "none"; 
+  }
