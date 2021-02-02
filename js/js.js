@@ -44,10 +44,6 @@ window.addEventListener("scroll",(event => {
 }))
 
 
-function AA(ele){
-    var a = ele;
-}
-
 document.getElementById("default").addEventListener("click", Activate);
 var LI = document.getElementsByClassName("DropDownMenu")[0].children;
 for(var i = 0; i < LI.length; i++)
