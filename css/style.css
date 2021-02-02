@@ -26,7 +26,7 @@ a{
     padding-bottom: 1%;
     position: fixed;
     width:100%;
-    z-index: 1;
+    z-index: 3;
 
 }
 
@@ -237,7 +237,7 @@ a{
     margin-left:auto;
     margin-right:auto;
     position: relative;
-    margin-bottom: 500px;
+    margin-bottom: 150px;
 }
 
 .map {

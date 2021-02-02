@@ -136,11 +136,11 @@ function mouseOverInfo(event) {
 
 function SearchForElement(){
     SearchBeenActivated = true;
-    var value = document.getElementsByClassName("search")[0].value.toLowerCase().trim();
+    var value = document.getElementsByClassName("search")[0].value.toLowerCase().replace(/\s/g, '');
     console.log(value);
     if(value != ""){
         for(var i = 0; i < InfoTextClasses.length; i++){
-            var str = InfoTextClasses[i].innerText.toLowerCase().trim();
+            var str = InfoTextClasses[i].innerText.toLowerCase().replace(/\s/g, '');
                 if(str == value){
                     document.getElementsByClassName(InfoTextClasses[i].classList[1])[0].classList.add("hover-active");
                 }
