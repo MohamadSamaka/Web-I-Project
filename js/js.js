@@ -1,7 +1,23 @@
 var flipper = false;
+var SearchBeenActivated = false;
 var FilteredOrNot = [0,0,0,0]
+
+
+function ScrollTo(){
+    var Y = document.getElementById("scroll-target").offsetTop - 110;
+    console.log(Y);
+    window.scrollTo(window.scrollX, Y);
+}
+
 var InfoTextClasses =  document.getElementsByClassName("info-text");
 document.getElementsByClassName("fas")[0].addEventListener("click",SearchForElement);
+document.getElementsByClassName("search")[0].addEventListener("keydown", function (e) {
+    if (e.keyCode === 13){
+        SearchForElement();
+        e.preventDefault();
+    }  
+});
+
 // var text = InfoTextClasses[0].innerText;
 var Groups = [document.getElementsByName("faculty"),document.getElementsByName("parking")
                 , document.getElementsByName("gate"), document.getElementsByName("others")];
@@ -124,11 +140,12 @@ function mouseOverInfo(event) {
 
 
 function SearchForElement(){
-    var value = document.getElementsByClassName("search")[0].value.toLowerCase();
+    SearchBeenActivated = true;
+    var value = document.getElementsByClassName("search")[0].value.toLowerCase().trim();
     console.log(value);
     if(value != ""){
         for(var i = 0; i < InfoTextClasses.length; i++){
-            var str = InfoTextClasses[i].innerText.toLowerCase();
+            var str = InfoTextClasses[i].innerText.toLowerCase().trim();
                 if(str == value){
                     document.getElementsByClassName(InfoTextClasses[i].classList[1])[0].classList.add("hover-active");
                 }
@@ -139,7 +156,11 @@ function SearchForElement(){
 }
 
 function ClearInputFeild(element){
-    if(element.value == ""){
+    if(element.value == "")
         HoverRemover(1);
+    else if(SearchBeenActivated){
+        HoverRemover(1);
+        SearchBeenActivated = false;
     }
+        
 }

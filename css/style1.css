@@ -114,15 +114,13 @@ body{
 }
 
 .border {
-    /* max-width: 250px; */
     padding: 1rem;
     position: relative;
     background: linear-gradient(to right, red, purple);
     padding: 3px;
 }
+
 .card p{
-    /* text-justify: inter-character;
-    font-size: 40px; */
     font-size: 25px;
     letter-spacing: 5px;
     word-spacing: -3px;
@@ -131,7 +129,6 @@ body{
     text-decoration: none solid rgb(68, 68, 68);
     font-variant: normal;
     text-transform: none;
-    text-justify: auto;
     background: #222;
     color: white;
     padding: 2rem;

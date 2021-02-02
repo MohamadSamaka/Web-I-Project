@@ -7,11 +7,13 @@ body,html{
     scroll-behavior:smooth;
     transform: smooth;
     position: relative;
+    /* margin-bottom: 1000px; */
 }
 
 a{
     text-decoration: none;
 }
+
 
 #face1{
     width: 100%;
@@ -111,6 +113,7 @@ a{
     position: absolute;
     top: 50%;
     left: 50%;
+    cursor: pointer;
 }
 .arrow span{
     display: block;
@@ -235,6 +238,7 @@ a{
     margin-left:auto;
     margin-right:auto;
     position: relative;
+    margin-bottom: 500px;
 }
 
 .map {
@@ -288,6 +292,11 @@ a{
     top: 71.6%;
   }
 
+#_4A{
+    left: 41.8%;
+    top: 68.1%;
+  }
+
   .info-button._5 {
     left: 42.9%;
     top: 83.7%;
@@ -303,9 +312,14 @@ a{
     top: 60.8%;
   }
   
-  .info-button._8 {
+  .info-button._8A {
     left: 51.5%;
     top: 56.8%;
+  }
+
+  .info-button._8B {
+    left: 53.7%;
+    top: 63%;
   }
 
   .info-button._9 {
