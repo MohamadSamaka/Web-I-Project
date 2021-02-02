@@ -12,20 +12,8 @@
         <div id = "face1">
             <nav id = "site-header-bg" class= "">
                 <div id = "site-header" class= "">
-                    <div id="site-logo"><a href="#">####</a></div>  
-                    <!-- <ul id="site-nav">
-                        <li><a href="#">About</a></li>    
-                    </ul>            -->
-                    <ul id="site-nav">
-                        <li><a href="#">About</a></li>
-                        <li id="languages">
-                            <a href="#">Langauge</a>
-                            <ul>
-                                <li><a href="#" class="language" id="english">English</a></li>
-                                <li><a href="#" class="language" id="arabic">العربية</a></li>
-                            </ul>
-                        </li>
-                    </ul> 
+                    <div id="site-logo"><a href="index.html">####</a></div>  
+                    <a id ="about" href="about.html">About</a>            
                 </div>
             </nav>
             <div id = "intro-block">
@@ -49,24 +37,81 @@
                 <li>Colleges</li>
                 <li>Parkings</li>
                 <li>Gates</li>
+                <li>Others</li>
             </ul> 
             </div>
             <form class="search_feild">
-                <input type="text" class="search" placeholder="Search">
+                <input type="text" class="search" placeholder="Search" oninput="ClearInputFeild(this);">
                 <i class="fas fa-search"></i><script src="https://kit.fontawesome.com/e892bebfdd.js" crossorigin="anonymous"></script>
             </form>
         </div>
-        <!-- <img id="AAUPmap" usemap="#workmap" src="../materials/AuupMapE5.jpg"> -->
+        <div>
         <div class="map">
             <img id="AAUPmap" src="../materials/AuupMapE5.jpg">
-            <div class="info-button building-thirteen" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">i</div>
-                <div class="info-text building-thirteen">
-                    this is some text info.
-                </div>
+            <div class="info-button _1" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _2" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _3" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _4" name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _5" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>            
+            <div class="info-button _6" name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _7"  name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _8" name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _9" name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _10" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _11" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _12" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _13" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _14"  name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _15"  name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _16" name = "faculty" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _17" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _18" name = "others" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _19" name = "gate" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _20"  name = "gate" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _21" name = "gate" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _22" name = "gate" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _23" name = "gate" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _24" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _25" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _26" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _27" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _28"  name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _29" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _30"  name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div>
+            <div class="info-button _31" name = "parking" onmousemove="mouseOverInfo(event);" onmouseout="mouseOut(event);">&nbsp;</div> 
         </div>
-        <!-- <map name="workmap">
-            <area shape="circle" onclick="test(this);" name = "parking" coords="361,37,10" href="#">
-        </map> -->
+        <div class="info-text _1">Presidentail Building</div>
+        <div class="info-text _2">Deanship of Student Afairs</div>
+        <div class="info-text _3"> Deanship of Admission and Registraion</div>
+        <div class="info-text _4">Faculty of Density</div>
+        <div class="info-text _5">Shopping Center</div>
+        <div class="info-text _6">Faculty of Allied Medical Siences</div>
+        <div class="info-text _7">Faculty of Engineering and Information Technology</div>
+        <div class="info-text _8">Faculty of Allied Medical Siences</div>
+        <div class="info-text _9">Faculty of arts and Faculity of Sciences</div>
+        <div class="info-text _10">Warehouse Building</div>
+        <div class="info-text _11">Student Dorms</div>
+        <div class="info-text _12">International Soccer Stadium</div>
+        <div class="info-text _13">Sports Hall</div>
+        <div class="info-text _14">Sports Feilds</div>
+        <div class="info-text _15">Administrative Departments Building</div>
+        <div class="info-text _16">Faculty of Law</div>
+        <div class="info-text _17">Employee Dorms</div>
+        <div class="info-text _18">Haseeb Sabbagh Center</div>
+        <div class="info-text _19">Gate1</div>
+        <div class="info-text _20">Gate2</div>
+        <div class="info-text _21">Gate3</div>
+        <div class="info-text _22">Gate4</div>
+        <div class="info-text _23">Gate5</div>
+        <div class="info-text _24">Parking</div>
+        <div class="info-text _25">Parking</div>
+        <div class="info-text _26">Parking</div>
+        <div class="info-text _27">Parking</div>
+        <div class="info-text _28">Parking</div>
+        <div class="info-text _29">Parking</div>
+        <div class="info-text _30">Parking</div>
+        <div class="info-text _31">Parking</div>
+        </div>
     </main>
     <script src="../js/js.js"></script>
     </body>
