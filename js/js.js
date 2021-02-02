@@ -1,6 +1,6 @@
 var flipper = false;
 var SearchBeenActivated = false;
-var FilteredOrNot = [0,0,0,0]
+var FilteredOrNot = [0,0,0,0];
 
 
 function ScrollTo(){
