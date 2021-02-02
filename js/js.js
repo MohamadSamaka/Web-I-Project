@@ -18,7 +18,6 @@ document.getElementsByClassName("search")[0].addEventListener("keydown", functio
     }  
 });
 
-// var text = InfoTextClasses[0].innerText;
 var Groups = [document.getElementsByName("faculty"),document.getElementsByName("parking")
                 , document.getElementsByName("gate"), document.getElementsByName("others")];
 window.addEventListener("scroll",(event => {
